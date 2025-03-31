@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login Popup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .popup {
+            background: white;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        button{
+            border-radius: 12px;
+            border-width: 1px;
+            border-color: black;
+            width: 90px;
+            height: 35px;
+            font-size: small;
+            cursor: pointer;
+        }
+        .login{
+            
+            background-color: red;
+        }
+       .google{
+        background-color: green;
+       }
+
+       .linha {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        font-size: small;
+        }
+        .linha::before,
+        .linha::after {
+            content: "";
+            flex: 1;
+            border-bottom: 1px solid black;
+            margin: 5px;
+        }
+
+        .linha span {
+            padding: 0 10px;
+            font-weight: bold;
+        }
+        .tela{
+            background-color: red;
+            border-radius: 10px 10px 0 0;
+            width: 300px;
+            height: 80px;
+            padding: 10px;
+            margin: 0px;
+        }
+
+        .entrar{
+        background-color: red;
+    }
+    .senha{
+        margin: 10px 0;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 250px;
+    height: 35px;
+    }
+    </style>
+</head>
+<body>
+    <div class="popup">
+        <header class="tela">
+            <h2>Faça login para continuar</h2>
+        </header>
+    
+    
+
+     <button class="login">Login</button>
+     <button class="login">Criar Conta</button>
+      <h1></h1>
+    <button class="google">google</button>
+
+    <h1></h1>
+    <div class="linha">
+        <span>
+            ou
+        </span>
+    </div>
+    <h1></h1>
+    <h1><input type="text" placeholder="Login" class="senha"></h1>
+    <h1></h1>
+    <h1><input type="password" placeholder="Senha" class="senha"></h1>
+    <h1></h1>
+    <a href="index.html">
+        <button class="entrar" onclick="">Entrar</button>
+    </a>
+    
+
+
+    </div>
+</body>
+</html>
+
+

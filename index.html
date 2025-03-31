@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> 
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Importa Chart.js -->
+  <title>Registrar Informações dos Alunos</title>
+  
+</head>
+<body>
+
+  <nav class="menu">
+    <div class="btn-expandir">
+      <i class="bi bi-list" id="btn-exp"></i>
+    </div>
+
+  <ul>
+      <li class="item-menu">
+        <a href="home.html">
+            <span class="icon"><i class="bi bi-house-door"></i></span>
+            <span class="txt-link">Home</span>
+        </a>
+    </li>
+    
+    <li class="item-menu ativo">
+      <a href="index.html">
+          <span class="icon"><i class="bi bi-journal-text"></i></span>
+          <span class="txt-link">Notas</span>
+      </a>
+    </li>
+  
+    <li class="item-menu">
+      <a href="popup.html">
+          <span class="icon"><i class="bi bi-person-circle"></i></span>
+          <span class="txt-link">Perfil</span>
+      </a>
+    </li>
+  </ul>
+
+  </nav>
+
+
+  <main>
+
+    <div class="card">
+      <h2>Registrar informações dos alunos</h2>
+      <select id="alunoSelect">
+        <option value="">Selecione o nome do aluno</option>
+        <option value="Aluno 1">Aluno 1</option>
+        <option value="Aluno 2">Aluno 2</option>
+      </select>
+    </div>
+
+    <div class="card">
+      <table>
+        <tr>
+          <th>Bimestre</th>
+          <th>Nota</th>
+          <th>Frequência</th>
+        </tr>
+        <tr>
+          <td>
+            <select>
+              <option>Selecione o Bimestre</option>
+              <option>1º Bimestre</option>
+              <option>2º Bimestre</option>
+              <option>3º Bimestre</option>
+              <option>4º Bimestre</option>
+            </select>
+          </td>
+          <td><input type="text" placeholder="Nota" class="nota" id="nota1"></td>
+          <td><input type="text" placeholder="Frequência" class="frequencia"></td>
+        </tr>
+        <tr>
+          <select>
+            <option>Selecione a materia</option>
+            <option>Matematica</option>
+            <option>Portugues</option>
+            <option>PI</option>
+            <option>Ciencia</option>
+          </select>
+          <td></td>
+          <td><input type="text" placeholder="Nota" class="nota" id="nota2"></td>
+          <td><input type="text" placeholder="Frequência" class="frequencia"></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="text" placeholder="Nota" class="nota" id="nota3"></td>
+          <td><input type="text" placeholder="Frequência" class="frequencia"></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="text" placeholder="Nota" class="nota" id="nota4"></td>
+          <td><input type="text" placeholder="Frequência" class="frequencia"></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h3>Calcular média do aluno</h3>
+      <button id="calcularBtn">Calcular</button>
+    </div>
+
+    
+    <div class="card" id="resultado" style="display:none;">
+      <h3>Resultado</h3>
+      <table>
+        <tr>
+          <th>Aluno</th>
+          <th>Média de Notas</th>
+          <th>Média de Frequência</th>
+          <th>Situação</th>
+        </tr>
+        <tr id="resultadoAluno">
+          <td id="resultadoNome">Aluno</td>
+          <td id="resultadoNotas">-</td>
+          <td id="resultadoFrequencia">-</td>
+          <td id="resultadoSituacao">-</td>
+        </tr>
+      </table>
+    </div>
+
+    <title>Gráfico de Notas</title>
+    <button onclick="gerarGrafico()" class="grafico">Gerar Gráfico</button>
+    <canvas id="graficoNotas"></canvas>
+
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
